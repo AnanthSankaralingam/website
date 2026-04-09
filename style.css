@@ -616,7 +616,19 @@ section:not(.hero) > .container {
   font-variant-numeric: tabular-nums;
 }
 
-.timeline-content h3 {
+.timeline-header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  margin-bottom: var(--space-3);
+}
+
+.timeline-header-text {
+  min-width: 0;
+  flex: 1;
+}
+
+.timeline-header-text h3 {
   font-family: var(--font-display);
   font-size: var(--text-base);
   font-weight: 700;
@@ -627,7 +639,41 @@ section:not(.hero) > .container {
   font-size: var(--text-sm);
   color: var(--color-primary);
   font-weight: 500;
-  margin-bottom: var(--space-2);
+}
+
+.timeline-content .timeline-header + p {
+  margin-top: 0;
+}
+
+.company-logo-wrap {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-2);
+}
+
+.company-logo {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+/* Simple Icons SVGs are black; invert on dark theme for contrast */
+[data-theme='dark'] .company-logo--mono {
+  filter: brightness(0) invert(1);
+}
+
+/* Wikipedia seal (color); keep visible on dark UI */
+.company-logo--seal {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
 }
 
 .timeline-content p {
