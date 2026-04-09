@@ -48,9 +48,9 @@
 }
 
 /* ============================================
-   COLOR — Dark base, warm amber accent (only)
+   COLOR — themes (warm amber accent in both)
    ============================================ */
-:root {
+html[data-theme="dark"] {
   color-scheme: dark;
 
   --color-bg: #0a0a0b;
@@ -61,8 +61,8 @@
   --color-divider: #222228;
 
   --color-text: #e4e4e7;
-  --color-text-muted: #8a8a94;
-  --color-text-faint: #52525b;
+  --color-text-muted: #a1a1aa;
+  --color-text-faint: #71717a;
 
   --color-primary: #f59e0b;
   --color-primary-hover: #d97706;
@@ -72,6 +72,37 @@
   --shadow-sm: 0 1px 2px rgba(0,0,0,0.3);
   --shadow-md: 0 4px 12px rgba(0,0,0,0.4);
   --shadow-lg: 0 12px 32px rgba(0,0,0,0.5);
+
+  /* Simple Icons: normalize to black, then to near-white (works for gray/colored SVG fills) */
+  --filter-mono-icon: brightness(0) saturate(100%) invert(1);
+  --filter-mono-icon-hover: brightness(0) saturate(100%) invert(64%) sepia(74%) saturate(2000%) hue-rotate(5deg) brightness(98%) contrast(96%);
+}
+
+html[data-theme="light"] {
+  color-scheme: light;
+
+  --color-bg: #f7f5f2;
+  --color-surface: #ffffff;
+  --color-surface-2: #efede9;
+  --color-surface-offset: #e6e3dd;
+  --color-border: #d9d4cc;
+  --color-divider: #e0dbd3;
+
+  --color-text: #18181b;
+  --color-text-muted: #52525b;
+  --color-text-faint: #71717a;
+
+  --color-primary: #d97706;
+  --color-primary-hover: #b45309;
+  --color-primary-active: #92400e;
+  --color-primary-glow: rgba(217, 119, 6, 0.12);
+
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+  --shadow-lg: 0 12px 32px rgba(0,0,0,0.1);
+
+  --filter-mono-icon: brightness(0) saturate(100%);
+  --filter-mono-icon-hover: brightness(0) saturate(100%) invert(48%) sepia(98%) saturate(600%) hue-rotate(5deg) brightness(96%) contrast(96%);
 }
 
 /* ============================================
@@ -85,6 +116,11 @@
   height: 100%;
   z-index: 0;
   pointer-events: none;
+  transition: opacity 0.35s var(--ease-out);
+}
+
+html[data-theme="light"] .scene-canvas {
+  opacity: 0.42;
 }
 
 /* ============================================
@@ -158,6 +194,49 @@ body {
 
 .nav-links a:hover {
   color: var(--color-primary);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: calc(var(--space-2) * -1);
+  border-radius: var(--radius-md);
+  color: var(--color-text-muted);
+  transition: color var(--transition-interactive), background var(--transition-interactive);
+}
+
+.theme-toggle:hover {
+  color: var(--color-primary);
+  background: oklch(from var(--color-surface-2) l c h / 0.6);
+}
+
+html[data-theme="light"] .theme-toggle:hover {
+  background: var(--color-surface-2);
+}
+
+.theme-toggle-icon--for-dark {
+  display: none;
+}
+
+.theme-toggle-icon--for-light {
+  display: none;
+}
+
+html[data-theme="dark"] .theme-toggle-icon--for-dark {
+  display: block;
+}
+
+html[data-theme="light"] .theme-toggle-icon--for-light {
+  display: block;
 }
 
 .nav-hamburger {
@@ -304,7 +383,7 @@ body {
 }
 
 .brand-logo-img--mono {
-  filter: brightness(0) invert(1);
+  filter: var(--filter-mono-icon);
 }
 
 .hero-links .brand-logo-img {
@@ -318,7 +397,7 @@ body {
 }
 
 .footer-links a:hover .brand-logo-img--mono {
-  filter: brightness(0) saturate(100%) invert(64%) sepia(74%) saturate(2000%) hue-rotate(5deg) brightness(98%) contrast(96%);
+  filter: var(--filter-mono-icon-hover);
 }
 
 .inline-brand-link {
@@ -677,7 +756,7 @@ section:not(.hero) > .container {
 
 /* Simple Icons SVGs are black; invert for dark UI contrast */
 .company-logo--mono {
-  filter: brightness(0) invert(1);
+  filter: var(--filter-mono-icon);
 }
 
 /* Wikipedia seal (color); keep visible on dark UI */
@@ -790,7 +869,7 @@ section:not(.hero) > .container {
 }
 
 .interest-card a:hover .brand-logo-img--mono {
-  filter: brightness(0) saturate(100%) invert(64%) sepia(74%) saturate(2000%) hue-rotate(5deg) brightness(98%) contrast(96%);
+  filter: var(--filter-mono-icon-hover);
 }
 
 @media (max-width: 768px) {
@@ -876,7 +955,7 @@ section:not(.hero) > .container {
 
 .footer-text {
   font-size: var(--text-xs);
-  color: var(--color-text-faint);
+  color: var(--color-text-muted);
 }
 
 .footer-links {
