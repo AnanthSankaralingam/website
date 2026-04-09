@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="dark" />
   <title>Ananth Sankaralingam</title>
-  <meta name="description" content="Builder, researcher, musician. CS @ University of Maryland. Founder of chromie.dev." />
+  <meta name="description" content="Builder, researcher, musician. CS @ University of Maryland. Founder of chromie.dev and promptly.fyi." />
   <meta property="og:title" content="Ananth Sankaralingam" />
-  <meta property="og:description" content="Builder, researcher, musician. CS @ University of Maryland. Founder of chromie.dev." />
+  <meta property="og:description" content="Builder, researcher, musician. CS @ University of Maryland. Founder of chromie.dev and promptly.fyi." />
 
   <!-- Fonts -->
   <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800&f[]=satoshi@400,500,700&display=swap" rel="stylesheet" />
@@ -42,11 +43,6 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#beyond">Beyond Code</a></li>
-        <li>
-          <button class="theme-toggle" data-theme-toggle aria-label="Switch to light mode">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-          </button>
-        </li>
       </ul>
       <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
@@ -60,7 +56,7 @@
       <div class="hero-tag">Open to opportunities</div>
       <h1>Ananth<br/>Sankara&shy;lingam</h1>
       <p class="hero-sub">
-        CS &amp; Math @ UMD · Founder of <strong>chromie.dev</strong> · 
+        CS @ UMD · Founder of <strong>chromie.dev</strong> and <strong>promptly.fyi</strong>· 
         Published ML researcher · Mridangam player · Half Ironman finisher
       </p>
       <div class="hero-links">
@@ -69,11 +65,11 @@
           Get in touch
         </a>
         <a href="https://www.linkedin.com/in/ananth-s/" class="secondary" target="_blank" rel="noopener noreferrer">
-          <i data-lucide="linkedin" style="width:16px;height:16px;"></i>
+          <img class="brand-logo-img brand-logo-img--mono" src="https://cdn.jsdelivr.net/npm/simple-icons@11/icons/linkedin.svg" width="18" height="18" alt="" decoding="async" />
           LinkedIn
         </a>
         <a href="https://github.com/AnanthSankaralingam" class="secondary" target="_blank" rel="noopener noreferrer">
-          <i data-lucide="github" style="width:16px;height:16px;"></i>
+          <img class="brand-logo-img brand-logo-img--mono" src="https://cdn.jsdelivr.net/npm/simple-icons@11/icons/github.svg" width="18" height="18" alt="" decoding="async" />
           GitHub
         </a>
       </div>
@@ -88,13 +84,13 @@
           <p class="section-label">About</p>
           <h2 class="section-title">Builder at heart, researcher by craft.</h2>
           <p>
-            I'm a senior CS &amp; Math student at the University of Maryland (GPA 3.8, graduating May 2026) who thrives at the intersection of AI research and shipping real products.
+            I'm a senior CS student at the University of Maryland (GPA 3.8, graduating May 2026) who thrives at the intersection of AI research and shipping real products.
           </p>
           <p>
-            I built Promptly AI to 20,000 users before it was acquired, and I'm now building chromie.dev — a no-code platform for Chrome extensions powered by AI. My research on LLM key-value cache compression (HashEvict) has been published at NeurIPS and ICLR.
+            I built Promptly AI to 20,000 users before it was acquired, and I'm now building chromie.dev — a no-code platform for Chrome extensions powered by AI. My research on LLM key-value cache compression (HashEvict) has been published at NeurIPS.
           </p>
           <p>
-            When I'm not coding, you'll find me playing mridangam, shooting hoops, or teaching CS concepts on YouTube.
+            When I'm not coding, you'll find me playing mridangam, playing sports, or making YouTube videos.
           </p>
         </div>
         <div class="about-media">
@@ -106,7 +102,7 @@
           />
           <div class="about-highlights">
             <div class="highlight-card">
-              <h3>UMD CS + Math</h3>
+              <h3>UMD CS</h3>
               <p>3.8 GPA · May 2026</p>
             </div>
             <div class="highlight-card">
@@ -114,7 +110,7 @@
               <p>Promptly AI (acquired)</p>
             </div>
             <div class="highlight-card">
-              <h3>NeurIPS + ICLR</h3>
+              <h3>NeurIPS</h3>
               <p>HashEvict paper</p>
             </div>
             <div class="highlight-card">
@@ -180,12 +176,58 @@
           </div>
         </a>
 
+        <!-- CMSC Infinity -->
+        <a href="https://www.youtube.com/watch?v=ZYGu1eUsBi8" class="project-card project-card--featured fade-in" target="_blank" rel="noopener noreferrer">
+          <div class="project-video-wrap">
+            <img src="https://img.youtube.com/vi/ZYGu1eUsBi8/maxresdefault.jpg" alt="CMSC Infinity app demo" class="project-thumb" loading="lazy" />
+            <div class="play-badge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              Watch demo
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-header">
+              <h3>CMSC Infinity</h3>
+              <span class="arrow"><i data-lucide="arrow-up-right" style="width:20px;height:20px;"></i></span>
+            </div>
+            <p class="project-desc">Android quiz companion for UMD CMSC 436 (Programming Handheld Systems): capstone quiz app with search, retrieval-style features, and polished mobile UX. Source: https://github.com/AnanthSankaralingam/cmsc436-final-proj-quiz-app</p>
+            <div class="project-tags">
+              <span class="tag">Android</span>
+              <span class="tag">Java</span>
+              <span class="tag">CMSC 436</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- PolitiMeme -->
+        <a href="https://www.youtube.com/watch?v=2Qfm_Nghm7U" class="project-card project-card--featured fade-in" target="_blank" rel="noopener noreferrer">
+          <div class="project-video-wrap">
+            <img src="https://img.youtube.com/vi/2Qfm_Nghm7U/maxresdefault.jpg" alt="PolitiMeme project demo" class="project-thumb" loading="lazy" />
+            <div class="play-badge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              Watch demo
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-header">
+              <h3>PolitiMeme</h3>
+              <span class="arrow"><i data-lucide="arrow-up-right" style="width:20px;height:20px;"></i></span>
+            </div>
+            <p class="project-desc">ML project on political memes: modeling and analysis pipeline with end-to-end demo. Part of a coursework / research playlist showcase.</p>
+            <div class="project-tags">
+              <span class="tag">ML</span>
+              <span class="tag">NLP</span>
+              <span class="tag">Demos</span>
+            </div>
+          </div>
+        </a>
+
         <!-- HashEvict -->
         <a href="https://arxiv.org/abs/2412.16187" class="project-card fade-in" target="_blank" rel="noopener noreferrer">
           <div class="project-body">
             <div class="project-header">
               <div class="project-icon-sm">
-                <i data-lucide="file-text" style="width:20px;height:20px;color:var(--color-primary);"></i>
+                <img class="brand-logo-img brand-logo-img--mono" src="https://cdn.jsdelivr.net/npm/simple-icons@11/icons/arxiv.svg" width="22" height="22" alt="" decoding="async" />
               </div>
               <span class="arrow"><i data-lucide="arrow-up-right" style="width:20px;height:20px;"></i></span>
             </div>
@@ -199,12 +241,50 @@
           </div>
         </a>
 
+        <!-- Computer Vision Projects (repo collection) -->
+        <a href="https://github.com/AnanthSankaralingam/Computer-Vision-Projects" class="project-card fade-in" target="_blank" rel="noopener noreferrer">
+          <div class="project-body">
+            <div class="project-header">
+              <div class="project-icon-sm">
+                <img class="brand-logo-img brand-logo-img--mono" src="https://cdn.jsdelivr.net/npm/simple-icons@11/icons/github.svg" width="22" height="22" alt="" decoding="async" />
+              </div>
+              <span class="arrow"><i data-lucide="arrow-up-right" style="width:20px;height:20px;"></i></span>
+            </div>
+            <h3>Computer Vision Projects</h3>
+            <p class="project-desc">A collection of computer vision work in Python, implemented from scratch with minimal use of heavy libraries like OpenCV (mostly). Spans image processing, machine learning, and 3D reconstruction.</p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Computer Vision</span>
+              <span class="tag">3D</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Self-summarization (research) -->
+        <a href="https://www.linkedin.com/in/ananth-s/overlay/Project/506934601/treasury/?profileId=ACoAADhyrzEBMg-Fak40NKUcKxmt3FS02cnR8CE" class="project-card fade-in" target="_blank" rel="noopener noreferrer">
+          <div class="project-body">
+            <div class="project-header">
+              <div class="project-icon-sm">
+                <img class="brand-logo-img brand-logo-img--mono" src="https://cdn.jsdelivr.net/npm/simple-icons@11/icons/linkedin.svg" width="22" height="22" alt="" decoding="async" />
+              </div>
+              <span class="arrow"><i data-lucide="arrow-up-right" style="width:20px;height:20px;"></i></span>
+            </div>
+            <h3>Optimal Self-Summarization</h3>
+            <p class="project-desc">Research on when to trigger self-summarization in multi-turn LLM dialogues to balance context quality, cost, and downstream performance. UMD Furong Huang Lab.</p>
+            <div class="project-tags">
+              <span class="tag">LLMs</span>
+              <span class="tag">Dialogue</span>
+              <span class="tag">Research</span>
+            </div>
+          </div>
+        </a>
+
         <!-- YouTube Channel -->
         <a href="https://www.youtube.com/@ananthsankaralingam" class="project-card fade-in" target="_blank" rel="noopener noreferrer">
           <div class="project-body">
             <div class="project-header">
               <div class="project-icon-sm">
-                <i data-lucide="youtube" style="width:20px;height:20px;color:var(--color-primary);"></i>
+                <img class="brand-logo-img brand-logo-img--mono" src="https://cdn.jsdelivr.net/npm/simple-icons@11/icons/youtube.svg" width="22" height="22" alt="" decoding="async" />
               </div>
               <span class="arrow"><i data-lucide="arrow-up-right" style="width:20px;height:20px;"></i></span>
             </div>
@@ -270,7 +350,7 @@
                 <div class="company">University of Maryland (Furong Huang Lab)</div>
               </div>
             </div>
-            <p>Co-authored papers accepted to NeurIPS and ICLR on LLM KV cache compression. Researching optimal timing of self-summarization in multi-turn LLM conversations.</p>
+            <p>Co-authored papers accepted to NeurIPS on LLM KV cache compression. Researching optimal timing of self-summarization in multi-turn LLM conversations.</p>
           </div>
         </div>
         <div class="timeline-item">
@@ -334,7 +414,7 @@
             </a>
           </div>
           <h3>Music</h3>
-          <p>I play mridangam (South Indian percussion) and trumpet. I teach mridangam on my <a href="https://www.youtube.com/@ananthsankaralingam" target="_blank" rel="noopener noreferrer">YouTube channel</a>.</p>
+          <p>I play mridangam (South Indian percussion) and trumpet. See more on <a href="https://www.youtube.com/@ananthsankaralingam" target="_blank" rel="noopener noreferrer">YouTube</a>.</p>
         </div>
 
         <!-- Sports — with Ironman photo -->
@@ -357,7 +437,7 @@
             </a>
           </div>
           <h3>Teaching</h3>
-          <p>I teach CS concepts on YouTube — from Java fundamentals to AI agents and system design. <a href="https://www.youtube.com/@ananthsankaralingam" target="_blank" rel="noopener noreferrer">Check it out</a>.</p>
+          <p>I teach CS concepts on YouTube — from Java fundamentals to AI agents and system design. <a href="https://www.youtube.com/@ananthsankaralingam" class="inline-brand-link" target="_blank" rel="noopener noreferrer"><img class="brand-logo-img brand-logo-img--mono" src="https://cdn.jsdelivr.net/npm/simple-icons@11/icons/youtube.svg" width="14" height="14" alt="" decoding="async" /><span>Check it out</span></a>.</p>
         </div>
 
       </div>
@@ -370,13 +450,13 @@
       <span class="footer-text">&copy; 2026 Ananth Sankaralingam</span>
       <div class="footer-links">
         <a href="https://www.linkedin.com/in/ananth-s/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-          <i data-lucide="linkedin" style="width:18px;height:18px;"></i>
+          <img class="brand-logo-img brand-logo-img--mono" src="https://cdn.jsdelivr.net/npm/simple-icons@11/icons/linkedin.svg" width="22" height="22" alt="" decoding="async" />
         </a>
         <a href="https://github.com/AnanthSankaralingam" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <i data-lucide="github" style="width:18px;height:18px;"></i>
+          <img class="brand-logo-img brand-logo-img--mono" src="https://cdn.jsdelivr.net/npm/simple-icons@11/icons/github.svg" width="22" height="22" alt="" decoding="async" />
         </a>
         <a href="https://www.youtube.com/@ananthsankaralingam" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-          <i data-lucide="youtube" style="width:18px;height:18px;"></i>
+          <img class="brand-logo-img brand-logo-img--mono" src="https://cdn.jsdelivr.net/npm/simple-icons@11/icons/youtube.svg" width="22" height="22" alt="" decoding="async" />
         </a>
         <a href="https://medium.com/@ananth.sankaralingam" target="_blank" rel="noopener noreferrer" aria-label="Medium">
           <i data-lucide="book-open" style="width:18px;height:18px;"></i>
@@ -388,24 +468,6 @@
   <!-- ========== SCRIPTS ========== -->
   <script>
     lucide.createIcons();
-
-    // Theme toggle
-    (function() {
-      const t = document.querySelector('[data-theme-toggle]');
-      const r = document.documentElement;
-      let d = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      r.setAttribute('data-theme', d);
-      if (t) {
-        t.addEventListener('click', () => {
-          d = d === 'dark' ? 'light' : 'dark';
-          r.setAttribute('data-theme', d);
-          t.setAttribute('aria-label', 'Switch to ' + (d === 'dark' ? 'light' : 'dark') + ' mode');
-          t.innerHTML = d === 'dark'
-            ? '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>'
-            : '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
-        });
-      }
-    })();
 
     // Mobile nav toggle
     document.getElementById('hamburger').addEventListener('click', () => {
