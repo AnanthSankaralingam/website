@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('theme');
+        var theme = (stored === 'light' || stored === 'dark')
+          ? stored
+          : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+    })();
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" sizes="any" />
+  <title>Chat · Ananth Sankaralingam</title>
+  <meta name="description" content="Ask on-device questions about Ananth — powered by Transformers.js in your browser." />
+
+  <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800&f[]=satoshi@400,500,700&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+  <link rel="stylesheet" href="../base.css" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="./chat.css" />
+</head>
+<body class="chat-page">
+
+  <nav class="nav" aria-label="Primary">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">A<span>.</span>S</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#experience">Experience</a></li>
+        <li><a href="./" aria-current="page">Chat</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch theme" title="Theme">
+          <i data-lucide="sun" class="theme-toggle-icon theme-toggle-icon--for-dark" style="width:20px;height:20px;" aria-hidden="true"></i>
+          <i data-lucide="moon" class="theme-toggle-icon theme-toggle-icon--for-light" style="width:20px;height:20px;" aria-hidden="true"></i>
+        </button>
+        <button class="nav-hamburger" id="hamburger" type="button" aria-label="Toggle menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="chat-main">
+    <h1 class="chat-page-title">Ask about Ananth</h1>
+    <p class="chat-page-lede">
+      Runs free in your browser.
+    </p>
+
+    <div class="chat-panel">
+      <div class="chat-log" id="chat-log" aria-live="polite">
+        <div class="chat-row chat-row--assistant">
+          <div class="chat-bubble chat-bubble--assistant">
+            Ask anything about Ananth's work, research, or background. Replies are extracted on-device from the profile text bundled with this page - not from the open internet.
+          </div>
+        </div>
+      </div>
+      <div class="chat-status" id="chat-status" hidden></div>
+      <form class="chat-composer" id="chat-form">
+        <label class="sr-only" for="chat-input">Your question</label>
+        <input id="chat-input" name="q" type="text" autocomplete="off" placeholder="e.g. What is chromie.dev?" required />
+        <button type="submit" id="chat-send">Send</button>
+      </form>
+    </div>
+  </main>
+
+  <script>
+    lucide.createIcons();
+    (function () {
+      var root = document.documentElement;
+      var btn = document.getElementById('theme-toggle');
+      function labelFor(theme) {
+        return theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme';
+      }
+      function applyTheme(theme) {
+        root.setAttribute('data-theme', theme);
+        try { localStorage.setItem('theme', theme); } catch (e) {}
+        if (btn) btn.setAttribute('aria-label', labelFor(theme));
+      }
+      if (btn) {
+        btn.setAttribute('aria-label', labelFor(root.getAttribute('data-theme') || 'dark'));
+        btn.addEventListener('click', function () {
+          applyTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+        });
+      }
+    })();
+    document.getElementById('hamburger').addEventListener('click', function () {
+      document.getElementById('nav-links').classList.toggle('open');
+    });
+  </script>
+  <script type="module" src="./chat.js"></script>
+</body>
+</html>
